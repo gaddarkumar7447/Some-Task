@@ -1,6 +1,7 @@
 package com.example.recyclerviewadapter
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.internal.artificialFrame
 
-class AdaterClass (val  list : List<String>) : RecyclerView.Adapter<AdaterClass.MyViewHolder> (){
+class AdaterClass(val list: List<String>, val list2: List<String>) : RecyclerView.Adapter<AdaterClass.MyViewHolder> (){
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -19,6 +20,7 @@ class AdaterClass (val  list : List<String>) : RecyclerView.Adapter<AdaterClass.
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         holder.title.text = list[position]
+        holder.dec1.text = list[position]
     }
 
     override fun getItemCount(): Int {
